@@ -30,13 +30,13 @@ public:
     BST& operator= (BST& bst);
     BST& operator= (BST&& bst);
 
-    friend std::ostream& operator<< (std::ostream& os, BST::Node node);
+    friend std::ostream& operator<< (std::ostream& os, BST b);
 
     Node*& get_root();//return root节点
 
     void bfs(std::function<void(Node*& node)> func);
 
-    size_t length();//return nodes' number
+    size_t length() const;//return nodes' number
 
     bool add_node(int value);//should not be able to add a value that already exists in the tree
 
